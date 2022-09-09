@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="main">
+
+<div class="main1">
+
+<div class="steps" id="step1" onclick="step1()"><span class="num">1</span><span class="numstep">Personal Information</span></div>
+<div class="steps" id="step2" onclick="step2()"><span class="num">2</span><span class="numstep">Contact Information</span></div>
+<div  class="steps" id="preview"onclick="alldata()"><span class="num">3</span><span class="numstep">Preview Details </span></div>
+
+
+
+
+</div>
+<div class="main2" id="main2">
+<div class="main2-a" id="main2-a">
+
+    <center><h1>Personal Information</h1></center>
+
+    <p>First Name</p>
+<input type="text" placeholder="First Name" id="firstName">
+
+<p>Last Name</p>
+<input type="text" placeholder="Last Name" id="lastName">
+
+<p>Father Name</p>
+<input type="text" placeholder="Father Name" id="fatherName">
+<p>Email</p>
+<input type="email" placeholder="Email " id="email">
+<p>Gender</p>
+<select name="" id="gender">
+    <option value="">select gender</option>
+    <option value="">Male</option>
+    <option value="">Female</option>
+</select>
+
+<button class="btn">Submit & Next</button>
+</div>
+
+<div class="main2-b" id="main2-b">
+
+    <center><h1>Other Information</h1></center>
+
+    <p>Phone Number</p>
+<input type="number" placeholder="03xxxxxxxx" id="phone">
+
+<p>Linkdin ID</p>
+<input type="text" placeholder="http//Linkdin.com" id="linkdin">
+
+<p>Qualification</p>
+<input type="text" placeholder="BE in Softwere Engineering" id="qualification">
+<p>Skill</p>
+<input type="text" placeholder="frontend developer etc " id="skill">
+<p>City</p>
+<select name="" id="city">
+    <option value="">select city</option>
+    <option value="">Karachi</option>
+    <option value="">Lahore</option>
+    <option value="">Islamabad</option>
+    <option value="">Quetta</option>
+</select>
+<button class="btn" >Submit & Next</button>
+
+</div>
+
+<div class="main2-c" id="main2-c" >
+
+
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
