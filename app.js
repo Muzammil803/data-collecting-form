@@ -104,8 +104,10 @@ function submit() {
             title: "Select Your City ",
             icon: "warning",
             button: "ok!",
-        });
-
+        }
+       
+        );
+        return false
     }
     if (!gender.options[gender.selectedIndex].text.match(nameReg)) {
 
@@ -155,7 +157,62 @@ function submit() {
     }
 
 }
+function checkstep1(){
+if((nameReg).test(firstName.value) == true && (nameReg).test(lastName.value) == true
+&& (nameReg).test(fatherName.value) == true && (emailReg).test(email.value) == true
+&&(nameReg).test(gender.options[gender.selectedIndex].text) == true){
+    step2()
+}
 
+    if (!gender.options[gender.selectedIndex].text.match(nameReg)) {
+
+        swal({
+            title: "Select Gender",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!email.value.match(emailReg)) {
+
+        swal({
+            title: "Invalid Email ",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!fatherName.value.match(nameReg)) {
+
+        swal({
+            title: "Invalid Father Name",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+
+    if (!lastName.value.match(nameReg)) {
+
+        swal({
+            title: "Invalid Last Name",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!firstName.value.match(nameReg)) {
+
+        swal({
+            title: "Invalid First Name",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+
+
+}
 
 
 function alldata() {
@@ -251,8 +308,8 @@ function alldata() {
 `
 
 }
-function print(a, b, c, d, e) {
-    admin_b.innerHTML =
+function print(a,b,c,d,e) {
+    admin_b.innerHTML+=
         `
 <div class="admin-b-1">
 
@@ -263,10 +320,11 @@ function print(a, b, c, d, e) {
         <span class="header">${e}</span>
     </div>
 `
+
+console.log(admin_b.length)
 }
-print(1, 2, 3, 4, 1)
-print(23, 2, 3, 4, 1)
-print(4, 2, 3, 4, 1)
+
+
 function adminCall() {
 
     var keys = Object.keys(localStorage)
