@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,97 +10,106 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
+
 <body>
-<div id="admin" class="admin">
-    <div class="admin-a">
-      <h3 class="header">Name</h3>
-      <h3 class="header">Father Name</h3>
-      <h3 class="header gmail">Gmail</h3>
-      <h3 class="header">Gender</h3>
-      <h3 class="header">City</h3>
+    <div id="admin" class="admin">
+        <div class="admin-a">
+            <h3 class="header">Name</h3>
+            <h3 class="header">Father Name</h3>
+            <h3 class="header gmail">Gmail</h3>
+            <h3 class="header">Gender</h3>
+            <h3 class="header">City</h3>
+        </div>
+        <div id="admin-b">
+
+        </div>
+
     </div>
-   <div id="admin-b">
-     
-</div>
-    
-</div>
-<div class="adminlogin" id="adminlogin"></div>
-<div class="main" id="main">
+    <div class="adminlogin" id="adminlogin"></div>
+    <div class="main" id="main">
 
-<div class="main1">
+        <div class="main1">
 
-<div class="steps" id="step1" onclick="step1()"><span class="num"><b>1</b></span><span class="numstep"><b>Personal Information</b></span></div>
-<div class="steps" id="step2" onclick="step2()"><span class="num"><b>2</b></span><span class="numstep"><b>Other Information</b></span></div>
-<div  class="steps" id="preview"onclick="alldata()"><span class="num"><b>3</b></span><span class="numstep"><b>Preview detalis</b></span></div>
-<div  class="steps" id="preview"onclick="loginadmin()"><span class="num"><b>4</b></span><span class="numstep"><b>Admin</b></span></div>
-
-
-
-
-</div>
-<div class="main2" id="main2">
-<div class="main2-a" id="main2-a">
-
-    <center><h1>Personal Information</h1></center>
-
-    <p>First Name</p>
-<input type="text" placeholder="First Name" id="firstName">
-
-<p>Last Name</p>
-<input type="text" placeholder="Last Name" id="lastName">
-
-<p>Father Name</p>
-<input type="text" placeholder="Father Name" id="fatherName">
-<p>Email</p>
-<input type="email" placeholder="Email " id="email">
-<p>Gender</p>
-<select name="" id="gender">
-    <option value="">select gender</option>
-    <option value="">Male</option>
-    <option value="">Female</option>
-</select>
-
-<button class="btn"  onclick="checkstep1()"><b>Submit & Next</b></button>
-</div>
-
-<div class="main2-b" id="main2-b">
-
-    <center><h1>Other Information</h1></center>
-
-    <p>Phone Number</p>
-<input type="number" placeholder="03xxxxxxxx" id="phone">
-
-<p>Linkdin ID</p>
-<input type="text" placeholder="http//Linkdin.com" id="linkdin">
-
-<p>Qualification</p>
-<input type="text" placeholder="BE in Softwere Engineering" id="qualification">
-<p>Skill</p>
-<input type="text" placeholder="frontend developer etc " id="skill">
-<p>City</p>
-<select name="" id="city">
-    <option value="">select city</option>
-    <option value="">Karachi</option>
-    <option value="">Lahore</option>
-    <option value="">Islamabad</option>
-    <option value="">Quetta</option>
-</select>
-<button class="btn" onclick="alldata()" ><b>Submit & Next</b></button>
-
-</div>
-
-<div class="main2-c" id="main2-c"  >
-
-
-
-</div>
-
-</div>
+            <div class="steps" id="step1" onclick="step1()"><span class="num"><b>1</b></span><span
+                    class="numstep"><b>Personal Information</b></span></div>
+            <div class="steps" id="step2" onclick="step2()"><span class="num"><b>2</b></span><span
+                    class="numstep"><b>Other Information</b></span></div>
+            <div class="steps" id="preview" onclick="alldata()"><span class="num"><b>3</b></span><span
+                    class="numstep"><b>Preview detalis</b></span></div>
+            <div class="steps" id="preview" onclick="loginadmin()"><span class="num"><b>4</b></span><span
+                    class="numstep"><b>Admin</b></span></div>
 
 
 
 
-</div>
+        </div>
+        <div class="main2" id="main2">
+            <div class="main2-a" id="main2-a">
+
+                <center>
+                    <h1>Personal Information</h1>
+                </center>
+
+                <p>First Name</p>
+                <input type="text" placeholder="First Name" id="firstName">
+
+                <p>Last Name</p>
+                <input type="text" placeholder="Last Name" id="lastName">
+
+                <p>Father Name</p>
+                <input type="text" placeholder="Father Name" id="fatherName">
+                <p>Email</p>
+                <input type="email" placeholder="Email " id="email">
+                <p>Gender</p>
+                <select name="" id="gender">
+                    <option value="">select gender</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                </select>
+
+                <button class="btn" onclick="checkstep1()"><b>Submit & Next</b></button>
+            </div>
+
+            <div class="main2-b" id="main2-b">
+
+                <center>
+                    <h1>Other Information</h1>
+                </center>
+
+                <p>Phone Number</p>
+                <input type="number" placeholder="03xxxxxxxx" id="phone">
+
+                <p>Linkdin ID</p>
+                <input type="text" placeholder="http//Linkdin.com" id="linkdin">
+
+                <p>Qualification</p>
+                <input type="text" placeholder="BE in Softwere Engineering" id="qualification">
+                <p>Skill</p>
+                <input type="text" placeholder="frontend developer etc " id="skill">
+                <p>City</p>
+                <select name="" id="city">
+                    <option value="">select city</option>
+                    <option value="">Karachi</option>
+                    <option value="">Lahore</option>
+                    <option value="">Islamabad</option>
+                    <option value="">Quetta</option>
+                </select>
+                <button class="btn" onclick="alldata()"><b>Submit & Next</b></button>
+
+            </div>
+
+            <div class="main2-c" id="main2-c">
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
 
 
 
@@ -108,6 +118,7 @@
 
 
 
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
