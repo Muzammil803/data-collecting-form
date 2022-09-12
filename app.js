@@ -5,7 +5,7 @@ var main2c = document.getElementById("main2-c")
 var admin = document.getElementById("admin")
 var admin_b = document.getElementById("admin-b")
 
-console.log(main2,main2a,main2b,main2c)
+console.log(main2, main2a, main2b, main2c)
 // main2-a div elements
 var firstName = document.getElementById("firstName")
 var lastName = document.getElementById("lastName")
@@ -20,33 +20,33 @@ var qualification = document.getElementById("qualification")
 var skill = document.getElementById("skill")
 var city = document.getElementById("city")
 
-function step1(){
-// alert("hello")
-    main2b.style.display="none"
-    main2c.style.display="none"
-    main2a.style.display="block"
+function step1() {
+    // alert("hello")
+    main2b.style.display = "none"
+    main2c.style.display = "none"
+    main2a.style.display = "block"
 
 
 }
-function step2(){
-    main2b.style.display="block"
+function step2() {
+    main2b.style.display = "block"
 
-    main2a.style.display="none"
-    main2c.style.display="none"
-// alert("hello")
+    main2a.style.display = "none"
+    main2c.style.display = "none"
+    // alert("hello")
 
 }
-let mainArr=[]
+let mainArr = []
 
-function sendToLocal(name,father,gmail,gen,cit){
-    let subArr1=[]
+function sendToLocal(name, father, gmail, gen, cit) {
+    let subArr1 = []
 
-    subArr1.push(name,father,gmail,gen,cit)
-mainArr.push(subArr1)
-console.log(mainArr)
-//     let subArr1=[name,father,gmail,gen,cit]
-// mainArr.push(subArr1)
-// localStorage.setItem(data,JSON.stringify(mainArr))
+    subArr1.push(name, father, gmail, gen, cit)
+    mainArr.push(subArr1)
+    console.log(mainArr)
+    //     let subArr1=[name,father,gmail,gen,cit]
+    // mainArr.push(subArr1)
+    // localStorage.setItem(data,JSON.stringify(mainArr))
 }
 // sendToLocal("muza","sda","das","das","erqwe")
 // sendToLocal("muza","sda","das","das","erqwe")
@@ -58,113 +58,113 @@ console.log(mainArr)
 //     button: "ok!",
 //   });
 //   REGEX
-let nameReg =   /(^[a-zA-Z]+$)/
+let nameReg = /(^[a-zA-Z]+$)/
 let ageReg = /^(\+?\d{1,3}|\d{1,4})$/
 let numReg = /^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}/g
 let emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 
-function submit(){
-    if((nameReg).test(firstName.value)==true&&(nameReg).test(lastName.value)==true
-    &&(nameReg).test(fatherName.value)==true &&(emailReg).test(email.value)==true
-    &&(numReg).test(phone.value)==true &&(nameReg).test(city.options[city.selectedIndex].text)==true
-    &&(nameReg).test(gender.options[gender.selectedIndex].text)==true){
-   sendToLocal(firstName.value,fatherName.value,email.value,gender.options[gender.selectedIndex].text,city.options[city.selectedIndex].text)
-   localStorage.setItem("data"+Math.random(),JSON.stringify(mainArr))
+function submit() {
+    if ((nameReg).test(firstName.value) == true && (nameReg).test(lastName.value) == true
+        && (nameReg).test(fatherName.value) == true && (emailReg).test(email.value) == true
+        && (numReg).test(phone.value) == true && (nameReg).test(city.options[city.selectedIndex].text) == true
+        && (nameReg).test(gender.options[gender.selectedIndex].text) == true) {
+        sendToLocal(firstName.value, fatherName.value, email.value, gender.options[gender.selectedIndex].text, city.options[city.selectedIndex].text)
+        localStorage.setItem("data" + Math.random(), JSON.stringify(mainArr))
 
-   //    {
-//     let subArr1=[firstName.value,fatherName.value,email.value,gender.options[gender.selectedIndex].text,city.options[city.selectedIndex].text]
-// mainArr.push(subArr1)
-// localStorage.setItem(data,JSON.stringify(mainArr))
-//    }
+        //    {
+        //     let subArr1=[firstName.value,fatherName.value,email.value,gender.options[gender.selectedIndex].text,city.options[city.selectedIndex].text]
+        // mainArr.push(subArr1)
+        // localStorage.setItem(data,JSON.stringify(mainArr))
+        //    }
 
-    
-    swal({
-            icon:"success",
-            title:"registration successfull",
-    button:"ok"
-        }).then(function reload(){
+
+        swal({
+            icon: "success",
+            title: "registration successfull",
+            button: "ok"
+        }).then(function reload() {
             location.reload()
         }
         )
-      
+
     }
     console.log((nameReg).test(firstName.value))
-    if(!phone.value.match(numReg)){
-        
-    swal({
-        title: "Invalid Phone Number ",
-        icon: "warning",
-        button: "ok!",
-    });
-    
-}
-if(!(city.options[city.selectedIndex].text).match(nameReg)){
-    
-    swal({
-        title: "Select Your City ",
-        icon: "warning",
-        button: "ok!",
-    });
-    
-}
-if(!gender.options[gender.selectedIndex].text.match(nameReg)){
-    
-swal({
-    title: "Select Gender",
-    icon: "warning",
-    button: "ok!",
-  });
+    if (!phone.value.match(numReg)) {
+
+        swal({
+            title: "Invalid Phone Number ",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!(city.options[city.selectedIndex].text).match(nameReg)) {
+
+        swal({
+            title: "Select Your City ",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!gender.options[gender.selectedIndex].text.match(nameReg)) {
+
+        swal({
+            title: "Select Gender",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!email.value.match(emailReg)) {
+
+        swal({
+            title: "Invalid Email ",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!fatherName.value.match(nameReg)) {
+
+        swal({
+            title: "Invalid Father Name",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+
+    if (!lastName.value.match(nameReg)) {
+
+        swal({
+            title: "Invalid Last Name",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!firstName.value.match(nameReg)) {
+
+        swal({
+            title: "Invalid First Name",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
 
 }
-if(!email.value.match(emailReg)){
-    
-swal({
-    title: "Invalid Email ",
-    icon: "warning",
-    button: "ok!",
-});
-
-}
-if(!fatherName.value.match(nameReg)){
-
-swal({
-    title: "Invalid Father Name",
-    icon: "warning",
-    button: "ok!",
-  });
-
-}
-
-if(!lastName.value.match(nameReg)){
-    
-    swal({
-        title: "Invalid Last Name",
-    icon: "warning",
-    button: "ok!",
-  });
-
-}
-if(!firstName.value.match(nameReg)){
-
-  swal({
-      title: "Invalid First Name",
-      icon: "warning",
-      button: "ok!",
-    });
-  
-}
-
-}
 
 
 
-function alldata(){
-    main2b.style.display="none"
-    main2a.style.display="none"
-    main2c.style.display="block"
+function alldata() {
+    main2b.style.display = "none"
+    main2a.style.display = "none"
+    main2c.style.display = "block"
 
 
-main2c.innerHTML=`
+    main2c.innerHTML = `
 
 
 <div class="preview">
@@ -251,9 +251,9 @@ main2c.innerHTML=`
 `
 
 }
-function print(a,b,c,d,e){
-    admin_b.innerHTML=
-`
+function print(a, b, c, d, e) {
+    admin_b.innerHTML =
+        `
 <div class="admin-b-1">
 
         <span class="header">${a}</span>
@@ -264,76 +264,76 @@ function print(a,b,c,d,e){
     </div>
 `
 }
-print(1,2,3,4,1)
-print(23,2,3,4,1)
-print(4,2,3,4,1)
-function adminCall(){
+print(1, 2, 3, 4, 1)
+print(23, 2, 3, 4, 1)
+print(4, 2, 3, 4, 1)
+function adminCall() {
 
-var keys= Object.keys(localStorage)
-console.log(keys)
-for(var i=0; i<keys.length;i++){
-    console.log((JSON.parse(localStorage.getItem(keys[i]))))
-var data= JSON.parse(localStorage.getItem(keys[i]))
-print(data[0][0],data[0][1],data[0][2],data[0][3],data[0][4])
+    var keys = Object.keys(localStorage)
+    console.log(keys)
+    for (var i = 0; i < keys.length; i++) {
+        console.log((JSON.parse(localStorage.getItem(keys[i]))))
+        var data = JSON.parse(localStorage.getItem(keys[i]))
+        print(data[0][0], data[0][1], data[0][2], data[0][3], data[0][4])
 
-// console.log(data[0][1])
-// for(var j=0 ; j<data[0].length ;j++){
-//     console.log(data[0][j])
-//     admin_b.innerHTML=
-//     `
-//             <span class="header">${data[0][j]}</span>
-// `
-// }
-// console.log(data[0][0])
-// console.log(data[0][1])
-// console.log(data[0][2])
-// console.log(data[0][3])
-// console.log(data[0][4])
-// var a = data[0][0]
-// var b = data[0][1]
-// var c = data[0][2]
-// var d = data[0][3]
-// var e = data[0][4]
-// admin_b.innerHTML=
-// `
-// <div class="admin-b-1">
+        // console.log(data[0][1])
+        // for(var j=0 ; j<data[0].length ;j++){
+        //     console.log(data[0][j])
+        //     admin_b.innerHTML=
+        //     `
+        //             <span class="header">${data[0][j]}</span>
+        // `
+        // }
+        // console.log(data[0][0])
+        // console.log(data[0][1])
+        // console.log(data[0][2])
+        // console.log(data[0][3])
+        // console.log(data[0][4])
+        // var a = data[0][0]
+        // var b = data[0][1]
+        // var c = data[0][2]
+        // var d = data[0][3]
+        // var e = data[0][4]
+        // admin_b.innerHTML=
+        // `
+        // <div class="admin-b-1">
 
-//         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][0]}</span>
-//         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][1]}</span>
-//         <span class="header gmail">${(JSON.parse(localStorage.getItem(keys[i])))[0][2]}</span>
-//         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][3]}</span>
-//         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][4]}</span>
-//     </div>
-// `
+        //         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][0]}</span>
+        //         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][1]}</span>
+        //         <span class="header gmail">${(JSON.parse(localStorage.getItem(keys[i])))[0][2]}</span>
+        //         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][3]}</span>
+        //         <span class="header">${(JSON.parse(localStorage.getItem(keys[i])))[0][4]}</span>
+        //     </div>
+        // `
 
-}
-console.log(admin_b)
+    }
+    console.log(admin_b)
 }
 
 adminCall()
-function logintest(){
+function logintest() {
     let user = document.getElementById("user")
     let pass = document.getElementById("pass")
-if(user.value==="admin"&&pass.value==="admin"){
-    document.getElementById("admin").style.display="block"
-const adminlogin = document.getElementById("adminlogin").style.display="none"
+    if (user.value === "admin" && pass.value === "admin") {
+        document.getElementById("admin").style.display = "block"
+        const adminlogin = document.getElementById("adminlogin").style.display = "none"
 
 
 
-}else{
-    swal(
-        {
-            icon:"warning",
-            title:"Wrong username or password"
-        }
-    )
+    } else {
+        swal(
+            {
+                icon: "warning",
+                title: "Wrong username or password"
+            }
+        )
+    }
 }
-}
-function loginadmin(){
-const adminlogin = document.getElementById("adminlogin")
-document.getElementById("main").style.display="none"
-adminlogin.innerHTML=
-`<div class="loginadmin">
+function loginadmin() {
+    const adminlogin = document.getElementById("adminlogin")
+    document.getElementById("main").style.display = "none"
+    adminlogin.innerHTML =
+        `<div class="loginadmin">
 <div><p>Username:</p>
 <input type="text " placeholder="Username" class="user" id="user"></div>
 <div><p>Password:</p>
