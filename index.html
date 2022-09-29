@@ -46,47 +46,58 @@
         <div class="main2" id="main2">
             <div class="main2-a" id="main2-a">
 
-                <center>
+                <!-- <center>
                     <h1>Personal Information</h1>
-                </center>
+                </center> -->
 
-                <p>First Name</p>
+                <p>First Name*</p>
                 <input type="text" placeholder="First Name" id="firstName">
 
-                <p>Last Name</p>
+                <p>Last Name*</p>
                 <input type="text" placeholder="Last Name" id="lastName">
 
-                <p>Father Name</p>
+                <p>Father Name*</p>
                 <input type="text" placeholder="Father Name" id="fatherName">
-                <p>Email</p>
+                <p>Email*</p>
                 <input type="email" placeholder="Email " id="email">
-                <p>Gender</p>
+               <div class="andbtn">
+
+               <div>
+
+                <p>Gender*</p>
                 <select name="" id="gender">
                     <option value="">select gender</option>
                     <option value="">Male</option>
                     <option value="">Female</option>
                 </select>
 
-                <button class="btn" onclick="checkstep1()"><b>Submit & Next</b></button>
-            </div>
+               </div>
+                <button class="btn" onclick="checkstep1()"><b>Next</b></button>
+
+
+               </div>            </div>
 
             <div class="main2-b" id="main2-b">
 
-                <center>
+                <!-- <center>
                     <h1>Other Information</h1>
-                </center>
+                </center> -->
 
-                <p>Phone Number</p>
+                <p>Phone Number*</p>
                 <input type="number" placeholder="03xxxxxxxx" id="phone">
 
                 <p>Linkdin ID</p>
-                <input type="text" placeholder="http//Linkdin.com" id="linkdin">
+                <input type="url" placeholder="http//Linkdin.com" id="linkdin">
 
                 <p>Qualification</p>
                 <input type="text" placeholder="BE in Softwere Engineering" id="qualification">
                 <p>Skill</p>
                 <input type="text" placeholder="frontend developer etc " id="skill">
-                <p>City</p>
+              <div class="andbtn">
+
+                <div>
+
+                    <p>City*</p>
                 <select name="" id="city">
                     <option value="">select city</option>
                     <option value="">Karachi</option>
@@ -94,7 +105,11 @@
                     <option value="">Islamabad</option>
                     <option value="">Quetta</option>
                 </select>
-                <button class="btn" onclick="alldata()"><b>Submit & Next</b></button>
+                </div>
+                <button class="btn" onclick="checkstep2()"><b>Next</b></button>
+
+
+              </div>
 
             </div>
 

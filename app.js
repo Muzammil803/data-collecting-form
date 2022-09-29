@@ -308,6 +308,39 @@ function alldata() {
 `
 
 }
+
+const checkstep2 = ()=>{
+if(
+ (numReg).test(phone.value) == true && (nameReg).test(city.options[city.selectedIndex].text) == true
+
+){
+
+    alldata()
+}
+
+
+
+
+if (!phone.value.match(numReg)) {
+
+    swal({
+        title: "Invalid Phone Number ",
+        icon: "warning",
+        button: "ok!",
+    });
+
+}
+if (!(city.options[city.selectedIndex].text).match(nameReg)) {
+
+    swal({
+        title: "Select Your City ",
+        icon: "warning",
+        button: "ok!",
+    }
+   
+    )
+
+}}
 function print(a,b,c,d,e) {
     admin_b.innerHTML+=
         `
