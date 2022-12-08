@@ -6,12 +6,12 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./back2.jpg);
+    background-image: url(./136495.webp);
     background-repeat: no-repeat;
     background-size: cover;
    
@@ -34,7 +34,7 @@ h3 {
     background-color: black;
     overflow: hidden;
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     /* margin-bottom: 20px; */
 
 }
@@ -177,10 +177,10 @@ select:focus {
     .main {
         flex-direction: column;
     }
-    body{
+    /* body{
         padding-top: 50px;
         padding-bottom: 50px;
-    }
+    } */
     .main1{
         padding-bottom: 0;
         
@@ -313,4 +313,11 @@ flex-direction: column;
 
 }}
 
+.container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
 
