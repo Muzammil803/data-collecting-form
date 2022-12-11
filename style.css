@@ -156,6 +156,11 @@ select:focus {
     background-color: antiquewhite;
 
 }
+@media (max-width:480px){
+    .btn{
+    margin-left: 19% !important;
+    }
+}
 
 .btn {
     background-color: rgb(236, 214, 90);

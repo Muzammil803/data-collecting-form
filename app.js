@@ -105,7 +105,7 @@ function submit() {
             icon: "warning",
             button: "ok!",
         }
-       
+
         );
         return false
     }
@@ -157,12 +157,12 @@ function submit() {
     }
 
 }
-function checkstep1(){
-if((nameReg).test(firstName.value) == true && (nameReg).test(lastName.value) == true
-&& (nameReg).test(fatherName.value) == true && (emailReg).test(email.value) == true
-&&(nameReg).test(gender.options[gender.selectedIndex].text) == true){
-    step2()
-}
+function checkstep1() {
+    if ((nameReg).test(firstName.value) == true && (nameReg).test(lastName.value) == true
+        && (nameReg).test(fatherName.value) == true && (emailReg).test(email.value) == true
+        && (nameReg).test(gender.options[gender.selectedIndex].text) == true) {
+        step2()
+    }
 
     if (!gender.options[gender.selectedIndex].text.match(nameReg)) {
 
@@ -309,40 +309,41 @@ function alldata() {
 
 }
 
-const checkstep2 = ()=>{
-if(
- (numReg).test(phone.value) == true && (nameReg).test(city.options[city.selectedIndex].text) == true
+const checkstep2 = () => {
+    if (
+        (numReg).test(phone.value) == true && (nameReg).test(city.options[city.selectedIndex].text) == true
 
-){
+    ) {
 
-    alldata()
-}
-
-
-
-
-if (!phone.value.match(numReg)) {
-
-    swal({
-        title: "Invalid Phone Number ",
-        icon: "warning",
-        button: "ok!",
-    });
-
-}
-if (!(city.options[city.selectedIndex].text).match(nameReg)) {
-
-    swal({
-        title: "Select Your City ",
-        icon: "warning",
-        button: "ok!",
+        alldata()
     }
-   
-    )
 
-}}
-function print(a,b,c,d,e) {
-    admin_b.innerHTML+=
+
+
+
+    if (!phone.value.match(numReg)) {
+
+        swal({
+            title: "Invalid Phone Number ",
+            icon: "warning",
+            button: "ok!",
+        });
+
+    }
+    if (!(city.options[city.selectedIndex].text).match(nameReg)) {
+
+        swal({
+            title: "Select Your City ",
+            icon: "warning",
+            button: "ok!",
+        }
+
+        )
+
+    }
+}
+function print(a, b, c, d, e) {
+    admin_b.innerHTML +=
         `
 <div class="admin-b-1">
 
@@ -354,7 +355,7 @@ function print(a,b,c,d,e) {
     </div>
 `
 
-console.log(admin_b.length)
+    console.log(admin_b.length)
 }
 
 
@@ -422,6 +423,7 @@ function logintest() {
 }
 function loginadmin() {
     const adminlogin = document.getElementById("adminlogin")
+    document.querySelector(".container").style.height = "100vh"
     document.getElementById("main").style.display = "none"
     adminlogin.innerHTML =
         `<div class="loginadmin">
